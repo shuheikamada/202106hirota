@@ -79,4 +79,59 @@ function get_top_parent_page_id() {
 				),
 			)
 		);
+		register_post_type('news',
+	    array(
+	      'labels' => array(
+	        'name' => 'NEWS',
+	        'singular_name' => 'NEWS',
+	      ),
+	      'public' => true,
+	      'menu_position' => 5,
+	      'has_archive' => true,
+				'supports' => array(
+					'title',
+					'thumbnail',
+					'editor'
+				),
+	    )
+	  );
+}
+
+
+//一覧ページ ページネーション
+//pages:最大ページ
+//paged:現在ページ
+function pagination($pages = '', $range = 1)
+{
+     $showitems = ($range * 2)+1;
+
+		global $wp_query;
+	 	$paged = $wp_query->query_vars['page'];
+
+     if(empty($paged)) $paged = 1;
+
+     if($pages == '')
+     {
+         global $wp_query;
+         $pages = $wp_query->max_num_pages;
+         if(!$pages)
+         {
+             $pages = 1;
+         }
+     }
+
+     if(1 != $pages)
+     {
+         if($pages >= 2 && $paged >=2 ) echo '<a href="/news.html?page='.( $paged - 1 ).'">&lt;</a>';
+
+         for ($i=1; $i <= $pages; $i++)
+         {
+             if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+             {
+                 echo ($paged == $i)? '<p class="current">'.$i.'</p>' : '<a href="/news.html?page='.( $i ).'"><p>'.$i.'</p></a>';
+             }
+         }
+
+         if($pages >= 2 && $paged < $pages ) echo '<a href="/news.html?page='.( $paged + 1 ).'">&gt;</a>';
+     }
 }

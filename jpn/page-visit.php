@@ -27,8 +27,9 @@
 			<div class="title-border"></div>
 			<h2><a href="/learn-us.html"><span>すみだ和ガラス館</span> Sumida Waglasskan</a></h2>
 			<?php if(!empty($ff_img_sumida)){ ?>
-					<div class="visual"> <img src="<?php echo $ff_img_sumida; ?>" alt="画像"> </div>
+				<div class="visual"> <img src="<?php echo $ff_img_sumida; ?>" alt="画像"> </div>
 			<?php } ?>
+
 						<div class="map">
 							<?php echo $ff_map_sumida; ?>
 							<p><?php echo $ff_address_sumida; ?><br>
@@ -45,13 +46,22 @@
 			</div>
 			<!-- /.address-sumida -->
 		</div>
+	</div>
 
+	<div class="top-banner">
+		<a href="https://hirotaglass.thebase.in/" target="_blank">
+		        <div class="banner-04"></div>
+		</a>
+	</div>
+
+	<div class="intro">
 
 				<div class="address">
 					<div class="title-border"></div>
 					<h2><a href="http://www.edokiriko.net/" target="_blank"><span>すみだ江戸切子館</span> Sumida Edo Kirikokan</a></h2>
 						<?php if(!empty($ff_img)){ ?>
 								<div class="visual"> <img src="<?php echo $ff_img; ?>" alt="画像"> </div>
+
 						<?php } ?>
 								<div class="text">
 									<p><?php echo $ff_text; ?></p>
