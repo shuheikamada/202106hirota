@@ -58,7 +58,11 @@
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('url');?>/jpn/shared/css/lightbox.css" />
 <?php wp_head(); ?>
 </head>
+<?php if($temp_name == 'single-news.php'):?>
+<body id="single-news">
+<?php else: ?>
 <body id="<?php echo getPageName(); ?>"<?php if(is_single()){ echo ' class="main"'; } ?>>
+<?php endif;?>
 <div id="pagetop" class="container">
   <div class="header">
     <div class="inner clearfix">

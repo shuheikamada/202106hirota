@@ -16,7 +16,11 @@
       Mac：Safari 5 (or later)</p>
     <p class="copyright">Copyright &copy;<?php echo date('Y'); ?> Hirota Glass Co.,Ltd All Rights Reserved.</p>
   </div>
-
+	<div class="footer-banner">
+    <!-- SnapWidget -->
+    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+    <iframe src="https://snapwidget.com/embed/943739" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
+	</div>
   <!-- /.container -->
 </div>
 
@@ -181,10 +185,6 @@ $('.bxslider').bxSlider({
 </script>
 <?php } ?>
 <?php wp_footer(); ?>
-<section class="footer-banner">
-  <!-- SnapWidget -->
-  <script src="https://snapwidget.com/js/snapwidget.js"></script>
-  <iframe src="https://snapwidget.com/embed/931626" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>
-</section>
+
 </body>
 </html>
